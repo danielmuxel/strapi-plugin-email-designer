@@ -3,7 +3,7 @@ import pluginPkg from '../../package.json';
 import pluginId from './pluginId';
 import Initializer from './components/Initializer';
 import PluginIcon from './components/PluginIcon';
-import pluginPermissions from 'strapi-plugin-email-designer/admin/src/permissions';
+import pluginPermissions from './permissions';
 
 const name = pluginPkg.strapi.name;
 
