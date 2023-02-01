@@ -3,6 +3,7 @@ import pluginPkg from '../../package.json';
 import pluginId from './pluginId';
 import Initializer from './components/Initializer';
 import PluginIcon from './components/PluginIcon';
+import pluginPermissions from 'strapi-plugin-email-designer/admin/src/permissions';
 
 const name = pluginPkg.strapi.name;
 
@@ -20,13 +21,7 @@ export default {
 
         return component;
       },
-      permissions: [
-        // Uncomment to set the permissions of the plugin here
-        // {
-        //   action: '', // the action name should be plugin::plugin-name.actionType
-        //   subject: null,
-        // },
-      ],
+      permissions: pluginPermissions.main
     });
     app.registerPlugin({
       id: pluginId,
